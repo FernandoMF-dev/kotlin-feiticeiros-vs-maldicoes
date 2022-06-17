@@ -1,2 +1,3 @@
-# kotlin-feiticeiros-vs-maldicoes
-Praticando Kotlin reimplementando um projeto feito durante minha graduação de Sistema de Informação
+# Feiticeiros VS Maldicoes - Kotlin
+
+Praticando Kotlin implementando um projeto feito durante a minha graduação de Sistema de Informação.
