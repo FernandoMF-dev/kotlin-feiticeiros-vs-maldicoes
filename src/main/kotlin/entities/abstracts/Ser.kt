@@ -3,13 +3,14 @@ package entities.abstracts
 import enums.MecanicaEnum
 import enums.StatusEnum
 
-abstract class Ser {
-	var nome: String? = null
-	var peso: Double? = null
-	var altura: Double? = null
-	var ataque: Int? = null
-	var energiaBase: Int? = null
-	var energia: Int? = null
+abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, energiaBase: Int) {
+	var nome: String? = nome
+	var peso: Double? = peso
+	var altura: Double? = altura
+	var ataque: Int? = ataque
+	var energiaBase: Int? = energiaBase
+	var energia: Int? = energiaBase
 	var status: MutableList<StatusEnum> = mutableListOf()
 	var mecanicas: MutableList<MecanicaEnum> = mutableListOf()
+
 }
