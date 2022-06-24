@@ -1,6 +1,5 @@
 package entities
 
-import enums.MecanicaEnum
 import enums.StatusEnum
 
 abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, energiaBase: Int) {
@@ -10,7 +9,8 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	var ataque: Int? = ataque
 	var energiaBase: Int? = energiaBase
 	var energia: Int? = energiaBase
-	var status: MutableList<StatusEnum> = mutableListOf()
-	var mecanicas: MutableList<MecanicaEnum> = mutableListOf()
 
+	var status: MutableList<StatusEnum> = mutableListOf()
+
+	var postMortem: Boolean = false
 }

@@ -8,4 +8,8 @@ class DedoSukuna(
 	peso: Double,
 	altura: Double,
 	humano: String
-) : Maldicao(nome, peso, altura, TipoMaldicaoEnum.DEDO_SUKUNA, humano)
+) : Maldicao(nome, peso, altura, TipoMaldicaoEnum.DEDO_SUKUNA, humano) {
+	init {
+		this.postMortem = true
+	}
+}

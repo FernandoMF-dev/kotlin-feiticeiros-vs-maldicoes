@@ -9,4 +9,6 @@ class Devastador(
 	altura: Double,
 	armas: Int,
 	regiao: String
-) : Feiticeiro(nome, peso, altura, TipoFeiticeiroEnum.DEVASTADOR, armas, regiao)
+) : Feiticeiro(nome, peso, altura, TipoFeiticeiroEnum.DEVASTADOR, armas, regiao) {
+	var carga: Int = 0
+}

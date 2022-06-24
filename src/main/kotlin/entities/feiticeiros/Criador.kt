@@ -1,6 +1,7 @@
 package entities.feiticeiros
 
 import entities.Feiticeiro
+import entities.Shikigami
 import enums.TipoFeiticeiroEnum
 
 class Criador(
@@ -9,4 +10,6 @@ class Criador(
 	altura: Double,
 	armas: Int,
 	regiao: String
-) : Feiticeiro(nome, peso, altura, TipoFeiticeiroEnum.CRIADOR, armas, regiao)
+) : Feiticeiro(nome, peso, altura, TipoFeiticeiroEnum.CRIADOR, armas, regiao) {
+	var shikigamis: MutableList<Shikigami> = mutableListOf()
+}
