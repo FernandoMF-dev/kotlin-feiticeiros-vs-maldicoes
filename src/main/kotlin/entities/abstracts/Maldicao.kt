@@ -1,5 +1,5 @@
 package entities.abstracts
 
 abstract class Maldicao : Ser() {
-	private var humano: String? = null
+	 var humano: String? = null
 }
