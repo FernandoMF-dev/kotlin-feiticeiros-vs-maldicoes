@@ -1,4 +1,4 @@
-package entities.abstracts
+package entities
 
 import enums.TipoFeiticeiroEnum
 

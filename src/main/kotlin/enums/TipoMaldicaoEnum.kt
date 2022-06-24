@@ -1,6 +1,6 @@
 package enums
 
-import entities.abstracts.Maldicao
+import entities.Maldicao
 import enums.interfaces.TipoMaldicaoEnumInterface
 
 enum class TipoMaldicaoEnum(val id: Int, val ataque: Int = 0, val energia: Int = 200) : TipoMaldicaoEnumInterface {

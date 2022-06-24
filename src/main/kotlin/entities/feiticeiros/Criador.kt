@@ -1,6 +1,6 @@
 package entities.feiticeiros
 
-import entities.abstracts.Feiticeiro
+import entities.Feiticeiro
 import enums.TipoFeiticeiroEnum
 
 class Criador(

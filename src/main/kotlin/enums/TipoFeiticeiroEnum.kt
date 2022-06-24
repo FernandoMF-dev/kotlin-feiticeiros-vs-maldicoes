@@ -1,6 +1,6 @@
 package enums
 
-import entities.abstracts.Feiticeiro
+import entities.Feiticeiro
 import entities.feiticeiros.Armado
 import entities.feiticeiros.Criador
 import entities.feiticeiros.Devastador
