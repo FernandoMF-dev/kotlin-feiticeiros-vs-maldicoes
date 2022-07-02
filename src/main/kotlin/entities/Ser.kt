@@ -63,7 +63,8 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	 */
 	open fun atacarPrimario(inimigos: Equipe, aliados: Equipe) {
 		getAlvo(inimigos, aliados).danificar(this.ataque)
-		status.remove(StatusEnum.CONFUSO)
+
+		this.finalizarAtaque()
 	}
 
 	/**
@@ -72,4 +73,9 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	open fun atacarSecundario(inimigos: Equipe, aliados: Equipe) {
 		this.atacarPrimario(inimigos, aliados)
 	}
+
+	fun finalizarAtaque() {
+		status.remove(StatusEnum.CONFUSO)
+	}
+
 }
