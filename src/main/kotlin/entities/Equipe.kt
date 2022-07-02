@@ -1,10 +1,26 @@
 package entities
 
 class Equipe {
-	val vivos: MutableList<Ser> = mutableListOf()
-	val mortos: MutableList<Ser> = mutableListOf()
+	private val vivos: MutableList<Ser> = mutableListOf()
+	private val mortos: MutableList<Ser> = mutableListOf()
 
-	fun rotacionarEquipe(): Unit {
+	fun size(): Int {
+		return vivos.size
+	}
+
+	fun getProximo(): Ser {
+		return this.getProximo(0)
+	}
+
+	fun getProximo(index: Int): Ser {
+		return vivos[index]
+	}
+
+	fun isDerrotado(): Boolean {
+		return vivos.isEmpty()
+	}
+
+	fun rotacionarEquipe() {
 		if (vivos.isEmpty()) {
 			return
 		}
@@ -12,15 +28,7 @@ class Equipe {
 		vivos.add(0, vivos.removeLast())
 	}
 
-	fun getProximo(): Ser {
-		return vivos.first()
-	}
-
-	fun isDerrotado(): Boolean {
-		return vivos.isEmpty()
-	}
-
-	fun removerMortos(): Unit {
+	fun removerMortos() {
 		for (ser: Ser in vivos) {
 			if (!ser.isVivo()) {
 				mortos.add(ser)
