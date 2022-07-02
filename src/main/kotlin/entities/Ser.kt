@@ -13,4 +13,8 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	var status: MutableList<StatusEnum> = mutableListOf()
 
 	var postMortem: Boolean = false
+
+	fun isVivo(): Boolean {
+		return (energia ?: 0) <= 0
+	}
 }
