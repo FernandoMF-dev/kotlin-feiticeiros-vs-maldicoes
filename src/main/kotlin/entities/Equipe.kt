@@ -1,11 +1,18 @@
 package entities
 
 class Equipe {
-	private val vivos: MutableList<Ser> = mutableListOf()
+	val vivos: MutableList<Ser> = mutableListOf()
 	private val mortos: MutableList<Ser> = mutableListOf()
 
 	fun size(): Int {
 		return vivos.size
+	}
+
+	fun addReforco(reforco: Ser) {
+		if (!reforco.isVivo()) {
+			return
+		}
+		vivos.add(reforco)
 	}
 
 	fun getProximo(): Ser {

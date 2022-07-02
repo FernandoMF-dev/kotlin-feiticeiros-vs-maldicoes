@@ -45,6 +45,10 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 		energia -= ataque
 	}
 
+	open fun getEquipeAliada(inimigos: Equipe, aliados: Equipe): Equipe {
+		return if (hasStatus(StatusEnum.CONFUSO)) inimigos else aliados
+	}
+
 	open fun getEquipeAlvo(inimigos: Equipe, aliados: Equipe): Equipe {
 		return if (hasStatus(StatusEnum.CONFUSO)) aliados else inimigos
 	}
@@ -72,6 +76,10 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	 */
 	open fun atacarSecundario(inimigos: Equipe, aliados: Equipe) {
 		this.atacarPrimario(inimigos, aliados)
+	}
+
+	open fun ativarPostMortem(inimigos: Equipe, aliados: Equipe) {
+		throw NotImplementedError("'Post Mortem' não implementado")
 	}
 
 	fun finalizarAtaque() {
