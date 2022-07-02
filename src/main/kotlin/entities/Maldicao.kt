@@ -10,7 +10,7 @@ abstract class Maldicao(
 	humano: String
 ) : Ser(nome, peso, altura, tipo.ataque, tipo.energia) {
 
-	var tipo: TipoMaldicaoEnum? = tipo
-	var humano: String? = humano
+	var tipo: TipoMaldicaoEnum = tipo
+	var humano: String = humano
 
 }
