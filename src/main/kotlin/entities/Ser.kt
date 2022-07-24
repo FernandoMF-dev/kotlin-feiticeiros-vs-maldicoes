@@ -1,8 +1,11 @@
 package entities
 
 import enums.StatusEnum
+import enums.TipoSerEnum
+import exceptions.MortisException
 
-abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, energiaBase: Int) {
+abstract class Ser(tipoSer: TipoSerEnum, nome: String, peso: Double, altura: Double, ataque: Int, energiaBase: Int) {
+	val tipoSer: TipoSerEnum = tipoSer
 	var nome: String = nome
 	var peso: Double = peso
 	var altura: Double = altura
@@ -39,10 +42,12 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 
 	open fun danificar() {
 		energia = energia.coerceAtLeast(0)
+		this.finalizarDanificar()
 	}
 
 	open fun danificar(ataque: Int) {
 		energia -= ataque
+		this.finalizarDanificar()
 	}
 
 	open fun getEquipeAliada(inimigos: Equipe, aliados: Equipe): Equipe {
@@ -84,6 +89,12 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 
 	fun finalizarAtaque() {
 		status.remove(StatusEnum.CONFUSO)
+	}
+
+	private fun finalizarDanificar() {
+		if (!this.isVivo()) {
+			throw MortisException(this)
+		}
 	}
 
 }

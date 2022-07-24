@@ -1,6 +1,7 @@
 package entities
 
 import enums.TipoFeiticeiroEnum
+import enums.TipoSerEnum
 
 abstract class Feiticeiro(
 	nome: String,
@@ -9,7 +10,7 @@ abstract class Feiticeiro(
 	tipo: TipoFeiticeiroEnum,
 	armas: Int,
 	regiao: String
-) : Ser(nome, peso, altura, tipo.ataque, tipo.energia) {
+) : Ser(TipoSerEnum.FEITICEIRO, nome, peso, altura, tipo.ataque, tipo.energia) {
 
 	var tipo: TipoFeiticeiroEnum = tipo
 	var armas: Int = armas
