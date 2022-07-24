@@ -13,7 +13,7 @@ class Armado(
 ) : Feiticeiro(nome, peso, altura, TipoFeiticeiroEnum.ARMADO, armas, regiao) {
 
 	override fun atacarPrimario(inimigos: Equipe, aliados: Equipe) {
-		getAlvo(inimigos, aliados).danificar(this.ataque * this.armas)
+		getSerAlvo(inimigos, aliados).danificar(this.ataque * this.armas)
 
 		this.finalizarAtaque()
 	}

@@ -53,7 +53,7 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 		return if (hasStatus(StatusEnum.CONFUSO)) aliados else inimigos
 	}
 
-	open fun getAlvo(inimigos: Equipe, aliados: Equipe): Ser {
+	open fun getSerAlvo(inimigos: Equipe, aliados: Equipe): Ser {
 		val equipeAlvo: Equipe = getEquipeAlvo(inimigos, aliados)
 
 		if (this == equipeAlvo.getProximo()) {
@@ -66,7 +66,7 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	 * Ataque usado quando se é o primeiro a atacar num turno
 	 */
 	open fun atacarPrimario(inimigos: Equipe, aliados: Equipe) {
-		getAlvo(inimigos, aliados).danificar(this.ataque)
+		getSerAlvo(inimigos, aliados).danificar(this.ataque)
 
 		this.finalizarAtaque()
 	}

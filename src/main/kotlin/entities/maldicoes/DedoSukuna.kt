@@ -14,9 +14,9 @@ class DedoSukuna(
 
 	override fun atacarPrimario(inimigos: Equipe, aliados: Equipe) {
 		if (Random.nextBoolean()) {
-			getAlvo(inimigos, aliados).danificar()
+			getSerAlvo(inimigos, aliados).danificar()
 		} else {
-			getAlvo(inimigos, aliados).curar()
+			getSerAlvo(inimigos, aliados).curar()
 		}
 
 		this.finalizarAtaque()

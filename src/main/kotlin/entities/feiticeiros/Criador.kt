@@ -16,7 +16,7 @@ class Criador(
 	private var shikigamis: MutableList<Shikigami> = mutableListOf()
 
 	override fun atacarPrimario(inimigos: Equipe, aliados: Equipe) {
-		val alvo: Ser = getAlvo(inimigos, aliados)
+		val alvo: Ser = getSerAlvo(inimigos, aliados)
 
 		super.atacarPrimario(inimigos, aliados)
 

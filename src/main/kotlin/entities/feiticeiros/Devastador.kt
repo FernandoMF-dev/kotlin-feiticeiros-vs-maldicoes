@@ -27,7 +27,7 @@ class Devastador(
 			super.atacarPrimario(inimigos, aliados)
 			return
 		}
-		getAlvo(inimigos, aliados).danificar()
+		getSerAlvo(inimigos, aliados).danificar()
 
 		this.finalizarAtaque()
 	}

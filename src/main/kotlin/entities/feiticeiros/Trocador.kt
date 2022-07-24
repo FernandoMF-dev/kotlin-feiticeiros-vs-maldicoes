@@ -19,7 +19,7 @@ class Trocador(
 			return
 		}
 
-		getAlvo(inimigos, aliados).addStatus(StatusEnum.CONFUSO)
+		getSerAlvo(inimigos, aliados).addStatus(StatusEnum.CONFUSO)
 		this.finalizarAtaque()
 	}
 
