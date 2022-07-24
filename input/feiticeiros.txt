@@ -1,0 +1,5 @@
+2 Sunaka 80 1.78 5 Noeh
+3 Sumori 75 1.60 10 Noeh
+3 Antal 88 1.90 11 Tukis
+1 Gamber 100 2.00 1 Lis
+4 Satoru 75 1.70 5 Tokyo

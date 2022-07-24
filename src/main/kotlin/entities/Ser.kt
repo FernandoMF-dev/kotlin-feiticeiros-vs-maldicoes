@@ -15,7 +15,7 @@ abstract class Ser(nome: String, peso: Double, altura: Double, ataque: Int, ener
 	var postMortem: Boolean = false
 
 	open fun isVivo(): Boolean {
-		return energia <= 0
+		return energia > 0
 	}
 
 	fun addStatus(status: StatusEnum) {

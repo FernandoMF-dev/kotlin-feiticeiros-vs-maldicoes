@@ -27,5 +27,10 @@ enum class TipoFeiticeiroEnum(val id: Int, val ataque: Int = 0, val energia: Int
 		override fun novoFeiticeiro(nome: String, peso: Double, altura: Double, armas: Int, regiao: String): Feiticeiro {
 			return Devastador(nome, peso, altura, armas, regiao)
 		}
+	};
+
+	companion object Static {
+		private val map = TipoFeiticeiroEnum.values().associateBy(TipoFeiticeiroEnum::id)
+		fun fromId(type: Int) = map[type] ?: throw IllegalArgumentException()
 	}
 }

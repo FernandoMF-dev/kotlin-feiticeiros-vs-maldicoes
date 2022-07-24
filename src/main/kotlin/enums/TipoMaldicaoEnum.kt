@@ -33,5 +33,10 @@ enum class TipoMaldicaoEnum(val id: Int, val ataque: Int = 0, val energia: Int =
 		override fun novaMaldicao(nome: String, peso: Double, altura: Double, humano: String): Maldicao {
 			return Sukuna(nome, peso, altura, humano)
 		}
+	};
+
+	companion object Static {
+		private val map = TipoMaldicaoEnum.values().associateBy(TipoMaldicaoEnum::id)
+		fun fromId(type: Int) = map[type] ?: throw IllegalArgumentException()
 	}
 }
